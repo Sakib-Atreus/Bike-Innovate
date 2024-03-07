@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import React from 'react';
-
+import bike from '@/assets/about-b.jpg';
 
 export const metadata = {
     title: "Dashboard | Bike Innovate - Next.js",
@@ -8,8 +9,9 @@ export const metadata = {
 
 const DashboardPage = () => {
     return (
-        <div>
-            <h2>Welcome to Dashboard</h2>
+        <div className='text-center text-4xl font-semibold container'>
+            <h2 className='mt-6 mb-12'>Welcome to Dashboard</h2>
+            <Image src={bike} alt=""></Image>
         </div>
     );
 };

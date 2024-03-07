@@ -29,12 +29,12 @@ const SingleBlog = async ({ params }) => {
   const {id, title, body} = await loadSingleBlogData(params.id);
 
   return (
-    <div>
-        Single Blog : {params.id} {params.title}
+    <div className="container mx-auto">
+        <h1 className="text-center text-3xl font-semibold my-12">Single Blog : {params.id} {params.title}</h1>
 
-        <div className="border border-green-500 my-2 mx-2 p-4">
-          <h2 className="text-2xl">{id}. {title}</h2>
-          <p>{body}</p>
+        <div className="border border-blue-500 my-2 mx-2 p-4 mb-24">
+          <h2 className="text-3xl">{id}. {title}</h2>
+          <p className="text-xl mt-12 p-8">{body}</p>
         </div>
 
       {/* <h2>

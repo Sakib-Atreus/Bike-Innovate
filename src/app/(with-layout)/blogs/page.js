@@ -36,10 +36,10 @@ const BlogsPage = async () => {
 
   return (
     <div className="container mx-auto">
-      <h2>Welcome to Blog{"'"}s Page</h2>
+      <h2 className="text-center text-4xl my-8 font-semibold">Welcome to Blog{"'"}s Page</h2>
 
-      {blogs.map(({ id, body, title }) => (
-        <div key={id} className="border border-blue-500 p-2 my-2">
+      <div className="grid grid-cols-3 gap-4">{blogs.map(({ id, body, title }) => (
+        <div key={id} className="border border-blue-500 p-6 my-2 shadow-xl rounded-lg">
           <h2 className="text-2xl">{id}. {title}</h2>
           <p>{body}</p>
           <Link
@@ -52,10 +52,10 @@ const BlogsPage = async () => {
             // }}
             className="inline-block mt-5"
           >
-            <button className="btn btn-primary btn-sm mt-2">Details</button>
+            <button className="btn btn-primary btn-sm mt-2 text-xl text-white relative bottom-2">Read Blog</button>
           </Link>
         </div>
-      ))}
+      ))}</div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Image src={banner} alt=""></Image>
         </div>
     );

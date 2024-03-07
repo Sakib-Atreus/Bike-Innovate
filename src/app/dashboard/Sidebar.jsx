@@ -18,9 +18,10 @@ const navLinks = [
 ];
 const Sidebar = () => {
   return (
-    <aside className="mr-10">
+    <aside className="mr-10 mt-12 border-2 border-gray-200 p-4">
       <h1 className="text-2xl font-semibold">Dashboard</h1>
-      <ul>
+      <hr className="border-1 border-gray-300"/>
+      <ul className="my-12 text-lg font-semibold text-gray-600">
         {navLinks.map(({ path, title }) => (
           <li key={path} className="my-2">
             <NavLink exact activeClassName="text-blue-500" href={path}>{title}</NavLink>
