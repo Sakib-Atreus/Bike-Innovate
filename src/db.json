@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mobile",
+      "imageUrl": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "id": 2,
+      "name": "Android",
+      "imageUrl": "https://via.placeholder.com/600/771796"
+    },
+    {
+      "id": 3,
+      "name": "iPhone",
+      "imageUrl": "https://via.placeholder.com/600/24f355"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 12 Pro",
+      "price": 52000,
+      "categoryId": 1,
+      "features": ["Exo 2100", "Dynamic AMOLED", "Triple"],
+      "imageUrl": "https://www.apple.com/newsroom/images/product/iphone/geo/apple_iphone-12_2-up_geo_10132020_inline.jpg.large.jpg"
+    },
+    {
+      "id": 2,
+      "title": "iPhone 12",
+      "price": 40000,
+      "categoryId": 1,
+      "features": ["Exo 210", "Dynamic AMOLED", "Triple"],
+      "imageUrl": "https://www.apple.com/newsroom/images/product/iphone/geo/apple_iphone-12_2-up_geo_10132020_inline.jpg.large.jpg"
+    },
+    {
+      "id": 3,
+      "title": "iPhone 12 Pro Max",
+      "price": 63000,
+      "categoryId": 2,
+      "features": ["Exo 21000", "Dynamic AMOLED", "Triple"],
+      "imageUrl": "https://www.apple.com/newsroom/images/product/iphone/geo/apple_iphone-12_2-up_geo_10132020_inline.jpg.large.jpg"
+    }
+  ]
+}

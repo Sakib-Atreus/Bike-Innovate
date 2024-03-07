@@ -1,0 +1,49 @@
+// "use client";
+
+// import { useParams, useSearchParams } from "next/navigation";
+import loadBlogsData from "@/utils/loadBlogsData";
+import loadSingleBlogData from "@/utils/loadSingleBlogData";
+import React from "react";
+
+export const generateMetadata = async ({ params }) => {
+    const { title } = await loadSingleBlogData(params.id);
+
+    return{
+        title: title,
+    }
+}
+
+export const generateStaticParams = async () => {
+    const blogs = await loadBlogsData();
+
+    return blogs.map((id) => ({
+        id: id.toString(),
+    }))
+}
+
+const SingleBlog = async ({ params }) => {
+  // const [year, id] = params.segments || [];
+  // const params2 = useParams();
+  // const searchParams2 = useSearchParams();
+
+  const {id, title, body} = await loadSingleBlogData(params.id);
+
+  return (
+    <div>
+        Single Blog : {params.id} {params.title}
+
+        <div className="border border-green-500 my-2 mx-2 p-4">
+          <h2 className="text-2xl">{id}. {title}</h2>
+          <p>{body}</p>
+        </div>
+
+      {/* <h2>
+        Single Blog {year || new Date().getFullYear()} for {id}
+      </h2>
+      <br />
+      {searchParams.title} */}
+    </div>
+  );
+};
+
+export default SingleBlog;
